@@ -17,10 +17,10 @@ function lerClientes() {
     if (!fs.existsSync(clientesFile)) {
         return [];
     }
-    const dados = fs.readFileSync(clientesFile, 'utf-8');
+    const dadosClientes = fs.readFileSync(clientesFile, 'utf-8');
 
     try {
-        return JSON.parse(dados) || [];
+        return JSON.parse(dadosClientes) || [];
     } catch (e) {
         return [];
     }
@@ -55,6 +55,47 @@ app.get('/clientes', (req, res) => {
     const clientes = lerClientes();
     res.status(200).json(clientes);
 });
+
+const produtosFile = path.join(__dirname, "produtos.json");
+
+function lerProdutos() {
+    if (!fs.existsSync(produtosFile)) {
+        return [];
+    }
+    const dadosProdutos = fs.readFileSync(produtosFile, 'utf-8');
+
+    try {
+        return JSON.parse(dadosProdutos) || [];
+    } catch (e) {
+        return [];
+    }
+
+}
+
+function salvarProdutos(produtos) {
+    fs.writeFileSync(produtosFile, JSON.stringify(produtos, null, 2), 'utf-8');
+}
+
+app.post('/produtos', (req, res) => {
+    const {nome, id, valor, descricao} = req.body;
+
+    if (!nome || !descricao || !valor || !id) {
+        return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
+    }
+
+    const produtos = lerProdutos();
+    
+    if(produtos.some(p => p.id === id && p.nome === nome)) {
+        return res.status(400).json({ error: 'Produto com ID e nome já cadastrado.' });
+    }
+
+const novoProduto = {nome, descricao, valor, id};
+produtos.push(novoProduto);
+salvarProdutos(produtos);
+
+res.status(201).json({ message:'Produto cadastrado com sucesso!', produto: novoProduto });
+});
+
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

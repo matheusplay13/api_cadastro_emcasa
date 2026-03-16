@@ -14,5 +14,13 @@
     "endereco": "Campo largo",
     "bairro": "Bateias",
     "contato": "6969696969"
+  },
+  {
+    "cpf": 12309205288,
+    "nome": "Eduardo",
+    "idade": 18,
+    "endereco": "São paulo",
+    "bairro": "brasilandia",
+    "contato": "550992010"
   }
 ]
