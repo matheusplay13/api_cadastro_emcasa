@@ -46,5 +46,13 @@
     "endereco": "Campo Largo",
     "bairro": "Estrada da onça",
     "contato": "41996062019"
+  },
+  {
+    "cpf": "12345678909",
+    "nome": "Matheus Silla De Souza Lima",
+    "idade": 17,
+    "endereco": "Rodovia Engenheiro Angelo Lopes, 1899",
+    "bairro": "Bateias",
+    "contato": "matheussilla688@gmail.com"
   }
 ]
