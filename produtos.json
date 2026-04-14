@@ -1,14 +1,14 @@
 [
   {
-    "nome": "Carro",
-    "descricao": "carro para dar uma volta",
-    "valor": 400000,
-    "id": 1
+    "nome": "Ps5",
+    "descricao": "Vídeogame Legal",
+    "valor": "5000.00",
+    "id": "13"
   },
   {
-    "nome": "Ps5",
-    "descricao": "um video game",
-    "valor": 5000,
-    "id": 2
+    "nome": "Toyotona Bruta do lucas",
+    "descricao": "Motor veio",
+    "valor": "15000.00",
+    "id": "14"
   }
 ]

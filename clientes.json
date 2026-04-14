@@ -1,13 +1,5 @@
 [
   {
-    "cpf": 15309220367,
-    "nome": "alan",
-    "idade": 15,
-    "endereco": "Campo largo",
-    "bairro": "Bateias",
-    "contato": "998080800"
-  },
-  {
     "cpf": 11122233344,
     "nome": "Maria",
     "idade": 17,
@@ -22,14 +14,6 @@
     "endereco": "São paulo",
     "bairro": "brasilandia",
     "contato": "550992010"
-  },
-  {
-    "cpf": 15420077972,
-    "nome": "Manuzinha",
-    "idade": 6,
-    "endereco": "Paraná",
-    "bairro": "Bateias",
-    "contato": "940028922"
   },
   {
     "cpf": 15420077973,
@@ -54,5 +38,37 @@
     "endereco": "Rodovia Engenheiro Angelo Lopes, 1899",
     "bairro": "Bateias",
     "contato": "matheussilla688@gmail.com"
+  },
+  {
+    "cpf": "143.124.244-12",
+    "nome": "Matheus Silla De Souza Lima",
+    "idade": "17",
+    "endereco": "Rodovia Engenheiro Angelo Lopes, 1899",
+    "bairro": "Bateias",
+    "contato": "41 98517-0432"
+  },
+  {
+    "cpf": "534.634.652-13",
+    "nome": "Eduardo Moreli",
+    "idade": "13",
+    "endereco": "Rua do mel",
+    "bairro": "Resende",
+    "contato": "eduardo@gmail.com"
+  },
+  {
+    "cpf": "453.453.534-51",
+    "nome": "Eduardo Moreli ABençoado",
+    "idade": "18",
+    "endereco": "Rua da casa dele",
+    "bairro": "Resende",
+    "contato": "eduardo2@gmail.com"
+  },
+  {
+    "cpf": "154.200.779-72",
+    "nome": "Matheus Silla De Souza Lima",
+    "idade": "17",
+    "endereco": "Rodovia Engenheiro Angelo Lopes, 1899",
+    "bairro": "Bateias",
+    "contato": "41 98517-0432"
   }
 ]
