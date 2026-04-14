@@ -18,15 +18,27 @@
     "senha": "Mv28022009"
   },
   {
-    "codigo": "12345",
-    "nome": "Matheus Silla",
-    "email": "matheussilla688@gmail.com",
-    "senha": "Matheus10!"
-  },
-  {
     "codigo": "123456",
     "nome": "Alan Martins",
     "email": "alan@gmail.com",
     "senha": "Alan1020!"
+  },
+  {
+    "codigo": "4321",
+    "nome": "Maria Vitória Cavicchiolo",
+    "email": "mv@gmail.com",
+    "senha": "Maria10!"
+  },
+  {
+    "codigo": "54321",
+    "nome": "Eduard Morel",
+    "email": "eduardmorel@gmail.com",
+    "senha": "Eduardo10!"
+  },
+  {
+    "codigo": "931",
+    "nome": "Lucas Roginski",
+    "email": "roginski@gmail.com",
+    "senha": "Lucas10!"
   }
 ]

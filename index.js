@@ -204,3 +204,79 @@ app.post('/login', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+// DELETE /clientes/:cpf
+app.delete('/clientes/:cpf', (req, res) => {
+  const { cpf } = req.params;
+  
+  try {
+    const clientes = lerClientes();
+    const clienteIndex = clientes.findIndex(c => c.cpf == cpf);
+    
+    if (clienteIndex === -1) {
+      return res.status(404).json({ error: 'Cliente não encontrado' });
+    }
+    
+    clientes.splice(clienteIndex, 1);
+    salvarClientes(clientes);
+    
+    res.json({ 
+      message: 'Cliente deletado com sucesso',
+      cpf: cpf
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao deletar cliente' });
+  }
+});
+
+
+
+// DELETE /usuarios/:codigo
+app.delete('/usuarios/:codigo', (req, res) => {
+  const { codigo } = req.params;
+  
+  try {
+    const usuarios = lerUsuarios();
+    const usuarioIndex = usuarios.findIndex(u => u.codigo === codigo);
+    
+    if (usuarioIndex === -1) {
+      return res.status(404).json({ error: 'Usuário não encontrado' });
+    }
+    
+    usuarios.splice(usuarioIndex, 1);
+    salvarUsuarios(usuarios);
+    
+    res.json({ 
+      message: 'Usuário deletado com sucesso',
+      codigo: codigo
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao deletar usuário' });
+  }
+});
+
+
+
+
+// DELETE /produtos/:id
+app.delete('/produtos/:id', (req, res) => {
+  const { id } = req.params;
+  
+  try {
+    const produtos = lerProdutos();
+    const produtoIndex = produtos.findIndex(p => p.id == id);
+    
+    if (produtoIndex === -1) {
+      return res.status(404).json({ error: 'Produto não encontrado' });
+    }
+    
+    produtos.splice(produtoIndex, 1);
+    salvarProdutos(produtos);
+    
+    res.json({ 
+      message: 'Produto deletado com sucesso',
+      id: id
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao deletar produto' });
+  }
+});
